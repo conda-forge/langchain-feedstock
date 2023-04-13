@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.136" %}
+{% set version = "0.0.138" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-  sha256: 6ab89b1d0d350792fba1cfe5f236f97d3484490b7ed61294156a1ddd8b68f187
+  sha256: 44f3f3d0819fce055fd859640cafd8af81cc6497daebc2721d1fcf33026fbdf6
 
 build:
   entry_points:
@@ -48,6 +48,7 @@ requirements:
     - jinja2 >=3.0.0,<4.0.0
     - tiktoken >=0.3.2,<0.4.0
     - pinecone-client >=2.0.0,<3.0.0
+    - pinecone-text >=0.4.2,<0.5.0
     - weaviate-client >=3.0.0,<4.0.0
     - google-api-python-client 2.70.0
     - wolframalpha 5.0.0
@@ -75,6 +76,7 @@ test:
     - langchain
   commands:
     - pip check
+    - langchain-server --help
   requires:
     - pip
 
