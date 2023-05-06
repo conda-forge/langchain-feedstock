@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.158" %}
+{% set version = "0.0.160" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-  sha256: 29b578a6c3ccb97b63ffa93451c590e03aa55c19a834c0a2d2f8573139ca5e90
+  sha256: 427c142e2fdb9f9ef9f2352a2c82db28db4d11c61f02b20dd33e77d850fe81cc
 
 build:
   entry_points:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8.1,<4.0
     - pydantic >=1.0.0,<2.0.0
-    - sqlalchemy >=1.3,<3
+    - sqlalchemy >=1.4,<3
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.4.1
     - numpy >=1.0.0,<2.0.0
