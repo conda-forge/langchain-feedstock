@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.180" %}
+{% set version = "0.0.181" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-  sha256: 1116cf7c6e05b0312cfb0ccf442b8b0e3812a1088081678ed937d81d8111480b
+  sha256: 54de0f012d11e0c1003baa8760a886d8b35a56ae6e8387057e8b5880f5da10f5
 
 build:
   entry_points:
