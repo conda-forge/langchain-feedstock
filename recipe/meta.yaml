@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.190" %}
+{% set version = "0.0.195" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-  sha256: ea0e9b024d799c26e22a468a9b2866d012f1a99c2ff99e6a261950eb70a1f9fd
+  sha256: cad83520ce32cd11cf63933e32e5a9191ea576564280aff283ea10a3533e516f
 
 build:
   entry_points:
@@ -22,6 +22,7 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
+    - langchainplus-sdk >=0.0.7
     - python >=3.8.1,<4.0
     - pydantic >=1.0.0,<2.0.0
     - sqlalchemy >=1.4,<3
