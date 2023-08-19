@@ -3,7 +3,7 @@ About langchain-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/langchain-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.github.com/hwchase17/langchain
+Home: https://github.com/langchain-ai/langchain
 
 Package license: MIT
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@YYYasin19](https://github.com/YYYasin19/)
+* [@pavelzw](https://github.com/pavelzw/)
 
