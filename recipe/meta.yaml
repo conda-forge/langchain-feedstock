@@ -1,13 +1,16 @@
 {% set name = "langchain" %}
-{% set version = "0.0.239" %}
+{% set version = "0.0.268" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-  sha256: a739ae141808e3d0abafe12c3daa4402c81bab8de033da48966702de6f647d96
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
+    sha256: 785e4d46001b491e3f450102238dbb257926f0d6feecbda5bc039c52709d2736
+  - url: https://github.com/langchain-ai/{{ name }}/archive/v{{ version }}.tar.gz
+    sha256: db5f636dee7368408477109de11379e6df03526c9a4d6da86274b4ef1d9ec4fd
+    folder: github-source
 
 build:
   entry_points:
@@ -146,11 +149,13 @@ test:
     - pip
 
 about:
-  home: https://www.github.com/hwchase17/langchain
+  home: https://github.com/langchain-ai/langchain
   summary: Building applications with LLMs through composability
   license: MIT
-  license_file: LICENSE
+  license_file:
+    - github-source/LICENSE
 
 extra:
   recipe-maintainers:
     - YYYasin19
+    - pavelzw
