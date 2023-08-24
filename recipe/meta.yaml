@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.271" %}
+{% set version = "0.0.272" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,9 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: f79d19405b755608216d1850de4a945a2bceb35c5ca8e4f7a4f9e29a366b097e
+    sha256: 418538686f0fb767e8995da504cc84faf9ce09a6eb7370ffcca01f3a6d3ea333
   - url: https://github.com/langchain-ai/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: 272779919d4df2523d4397da4b2d8ec928a767c70b638fd5ab98c2b92252b45e
+    sha256: d4040f49d863a62a61a1abb5cebe4c88926e1bd409e0be8dbbf2a90032aa0308
     folder: github-source
 
 build:
@@ -25,6 +25,7 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
+    - google-api-core >=2.11.1,<3.0.0
     - python >=3.8.1,<4.0
     - pydantic >=1,<3
     - sqlalchemy >=1.4,<3
