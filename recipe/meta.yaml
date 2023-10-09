@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.0.310" %}
+{% set version = "0.0.311" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,9 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: 71e2de02742517ea981cd185c258972d82e87693191fc8745947312888364e22
+    sha256: 24b277c31c265d22166626be825ceccab7eb48de718ba15fd3ac8faaa2b055c2
   - url: https://github.com/langchain-ai/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: 99393223c9dd4d35bbea63d703de56d15d69f40bbc036ca68c57b30864a7c0f8
+    sha256: b7f8b2e307d7ecd05b831af8968d3a472016e7285383ae1722b9e520c37e6a08
     folder: github-source
 
 build:
@@ -40,7 +40,7 @@ requirements:
     - aiohttp >=3.8.3,<4.0.0
     - async-timeout >=4.0.0,<5.0.0
     - numexpr >=2.8.4,<3.0.0
-    - langsmith >=0.0.40,<1.0.0
+    - langsmith >=0.0.43,<1.0.0
   run_constrained:
     - azure-core >=1.26.4,<2.0.0
     - tqdm >=4.48.0
