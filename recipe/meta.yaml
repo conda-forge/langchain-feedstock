@@ -8,16 +8,13 @@ package:
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
     sha256: 2cbb992b0a6975948d35616386d088c2920b66023cb94eb4f4b25e097fa1374d
-  - url: https://github.com/langchain-ai/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: 9abca8916b21afb14eb1f4c08cbfa52aaef1505125af2be1672c6cf232c9f6a6
-    folder: github-source
 
 build:
   entry_points:
     - langchain-server = langchain.server:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -156,7 +153,7 @@ about:
   summary: Building applications with LLMs through composability
   license: MIT
   license_file:
-    - github-source/LICENSE
+    - LICENSE
 
 extra:
   recipe-maintainers:
