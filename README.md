@@ -143,6 +143,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@YYYasin19](https://github.com/YYYasin19/)
-* [@pavelzw](https://github.com/pavelzw/)
-
+* [@langchain-ai](https://github.com/langchain-ai/)
