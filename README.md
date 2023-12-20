@@ -144,5 +144,8 @@ Feedstock Maintainers
 =====================
 
 * [@YYYasin19](https://github.com/YYYasin19/)
+* [@baskaryan](https://github.com/baskaryan/)
+* [@efriis](https://github.com/efriis/)
+* [@hinthornw](https://github.com/hinthornw/)
 * [@pavelzw](https://github.com/pavelzw/)
 
