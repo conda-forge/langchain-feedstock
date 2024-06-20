@@ -147,5 +147,6 @@ Feedstock Maintainers
 * [@baskaryan](https://github.com/baskaryan/)
 * [@efriis](https://github.com/efriis/)
 * [@hinthornw](https://github.com/hinthornw/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@pavelzw](https://github.com/pavelzw/)
 
