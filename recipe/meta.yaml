@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: ffdbf4fcea46a10d461bcbda2402220fcfd72a0c70e9f4161ae0510067b9b3bd
+    sha256: 867f6add370c1e3911b0e87d3dd0e36aec1e8f513bf06131340fe8f151d89dc5
 
 build:
   entry_points:
     - langchain-server = langchain.server:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -34,7 +34,7 @@ requirements:
     - aiohttp >=3.8.3,<4.0.0
     - tenacity >=8.1.0,<9.0.0
     - async-timeout >=4.0.0,<5.0.0
-  run_constrained:  
+  run_constrained:
     # based on https://github.com/langchain-ai/langchain/blob/master/libs/langchain/extended_testing_deps.txt
     - jsonschema >=4.22.0,<5
     - numexpr >=2.8.6,<3
