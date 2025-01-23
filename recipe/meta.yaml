@@ -12,6 +12,7 @@ source:
 build:
   entry_points:
     - langchain-server = langchain.server:main
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
