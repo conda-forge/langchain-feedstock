@@ -16,6 +16,7 @@ build:
     - langchain-server = langchain.server:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: {{ build }}
   string: "pymin{{ python_min|replace('.', '') }}_h{{ PKG_HASH }}_{{ build }}"
 
 requirements:
