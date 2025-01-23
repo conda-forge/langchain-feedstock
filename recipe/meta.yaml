@@ -21,7 +21,7 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }}{{ python_max }}
     - langchain-core >=0.3.31,<0.4.0
     - langchain-text-splitters >=0.3.3,<0.4.0
     - langsmith >=0.1.17,<0.4
@@ -29,8 +29,8 @@ requirements:
     - sqlalchemy >=1.4,<3
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
-    - numpy >=1.22.4,<3  # [py>=312]
-    - numpy >=1.22.4,<2  # [py<312]
+    - numpy >=1.22.4,<3  # [python_max == ""]
+    - numpy >=1.22.4,<2  # [python_max != ""]
     - aiohttp >=3.8.3,<4.0.0
     - tenacity >=8.1.0,!=8.4.0,<10
     - async-timeout >=4.0.0,<5.0.0
