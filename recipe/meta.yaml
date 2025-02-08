@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - pdm-backend
     - pip
   run:
     - python >={{ python_min }}{{ python_max }}
