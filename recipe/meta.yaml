@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "0.3.17" %}
+{% set version = "0.3.18" %}
 {% set build = 0 %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: cef56f0a7c8369f35f1fa2690ecf0caa4504a36a5383de0eb29b8a5e26f625a0
+    sha256: 311ac227a995545ff7c3f74c7767930c5349edef0b39f19d3105b86d39316b69
 
 build:
   entry_points:
@@ -22,24 +22,24 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - pdm-backend
     - pip
   run:
     - python >={{ python_min }}{{ python_max }}
-    - langchain-core >=0.3.33,<0.4.0
-    - langchain-text-splitters >=0.3.3,<0.4.0
-    - langsmith >=0.1.17,<0.4
-    - pydantic >=2.7.4,<3.0.0
-    - sqlalchemy >=1.4,<3
-    - requests >=2.0.0,<3.0.0
+    - langchain-core <1.0.0,>=0.3.34
+    - langchain-text-splitters <1.0.0,>=0.3.6
+    - langsmith <0.4,>=0.1.17
+    - pydantic <3.0.0,>=2.7.4
+    - sqlalchemy <3,>=1.4
+    - requests <3,>=2
     - pyyaml >=5.3
     {% if python_max == "" %}
-    - numpy >=1.22.4,<3
+    - numpy <2,>=1.26.4
     {% else %}
     - numpy >=1.22.4,<2
     {% endif %}
-    - aiohttp >=3.8.3,<4.0.0
-    - tenacity >=8.1.0,!=8.4.0,<10
+    - aiohttp <4.0.0,>=3.8.3
+    - tenacity !=8.4.0,<10,>=8.1.0
     - async-timeout >=4.0.0,<5.0.0
   run_constrained:
     # based on https://github.com/langchain-ai/langchain/blob/master/libs/langchain/extended_testing_deps.txt
