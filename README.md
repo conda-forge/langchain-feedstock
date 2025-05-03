@@ -145,9 +145,10 @@ Feedstock Maintainers
 
 * [@YYYasin19](https://github.com/YYYasin19/)
 * [@baskaryan](https://github.com/baskaryan/)
+* [@ccurme](https://github.com/ccurme/)
 * [@dlqqq](https://github.com/dlqqq/)
-* [@efriis](https://github.com/efriis/)
 * [@hinthornw](https://github.com/hinthornw/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@pavelzw](https://github.com/pavelzw/)
+* [@sydney-runkle](https://github.com/sydney-runkle/)
 
