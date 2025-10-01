@@ -1,7 +1,7 @@
 {% set name = "langchain" %}
 {% set version = "0.3.27" %}
-{% set build = 0 %}
-{% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
+{% set build = 1 %}
+{% set python_max = ",<3.13a0" if python_min == "3.10" else "" %}
 
 package:
   name: {{ name|lower }}
@@ -34,9 +34,9 @@ requirements:
     - requests <3,>=2
     - pyyaml >=5.3
     {% if python_max == "" %}
-    - numpy <2,>=1.26.4
+    - numpy >=2.1.0
     {% else %}
-    - numpy >=1.22.4,<2
+    - numpy >=1.26.4
     {% endif %}
     - aiohttp <4.0.0,>=3.8.3
     - tenacity !=8.4.0,<10,>=8.1.0
