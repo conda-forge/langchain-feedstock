@@ -1,7 +1,7 @@
 {% set name = "langchain" %}
 {% set version = "0.3.27" %}
 {% set build = 1 %}
-{% set python_max = ",<3.13a0" if python_min == "3.9" else "" %}
+{% set python_max = ",<3.13a0" if python_min == "3.10" else "" %}
 
 package:
   name: {{ name|lower }}
