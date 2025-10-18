@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - pdm-backend
+    - hatchling
     - pip
   run:
     - langgraph >=1.0.0,<1.1.0
