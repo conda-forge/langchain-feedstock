@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 {% set build = 0 %}
 {% set python_max = ",<3.13a0" if python_min == "3.10" else "" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: a087d1e2b2969819e29a91a6d5f98302aafe31bd49ba377ecee3bf5a5dcfe14a
+    sha256: cdd7ede31e30cb181a09de8a9d4dc4d23147870b9348db5a82bd166e237da808
 
 build:
   entry_points:
