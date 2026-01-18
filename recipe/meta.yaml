@@ -1,5 +1,5 @@
 {% set name = "langchain" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.6" %}
 {% set build = 0 %}
 {% set python_max = ",<3.13a0" if python_min == "3.10" else "" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain-{{ version }}.tar.gz
-    sha256: 65119ff1c2ac8cc2410739b0fb2773f8fbfbe83357df9bab8a5fceafb9e04aa1
+    sha256: 7d46cbf719d860a16f6fc182d5d3de17453dda187f3d43e9c40ac352a5094fdd
 
 build:
   entry_points:
@@ -27,7 +27,7 @@ requirements:
   run:
     - langgraph >=1.0.2,<1.1.0
     - python >={{ python_min }}{{ python_max }}
-    - langchain-core >=1.2.1,<2.0.0
+    - langchain-core >=1.2.7,<2.0.0
     - langchain-text-splitters <1.0.0,>=0.3.9
     - langsmith >=0.1.17
     - pydantic >=2.7.4,<3.0.0
