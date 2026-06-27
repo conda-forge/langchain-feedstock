@@ -37,12 +37,11 @@ requirements:
     - rapidfuzz >=3.1.1,<4
     - aiosqlite >=0.19.0,<0.23
     - greenlet >=3.1.0
-     # copied from langchain-openai-feedstock 1.1.6: https://github.com/conda-forge/langchain-openai-feedstock/blob/b1e9a5650bc8ec0215e6b4a0f18fdecd5073fe33/recipe/meta.yaml
+    # copied from langchain-openai-feedstock 1.1.6: https://github.com/conda-forge/langchain-openai-feedstock/blob/b1e9a5650bc8ec0215e6b4a0f18fdecd5073fe33/recipe/meta.yaml
     - openai >=2.0.0,<3.0.0 # and langchain-fireworks-feedstock
     - tiktoken >=0.7,<1
     # https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/partners/anthropic/pyproject.toml#L26
     - anthropic >=0.96.0,<1
-    # https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/partners/anthropic/pyproject.toml#L26
     # copied from langchain-fireworks-feedstock 1.1.0: https://github.com/conda-forge/langchain-fireworks-feedstock/blob/cc50a2f8f99615534b6d3c81f270daeb4eeccc83/recipe/meta.yaml
     # and langchain-together-feedstock 0.3.1: https://github.com/conda-forge/langchain-together-feedstock/blob/503f8b42da6bf1b7c4b370b1d3b59e8263639bd9/recipe/meta.yaml
     - fireworks-ai >=0.13.0
