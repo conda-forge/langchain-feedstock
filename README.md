@@ -3,11 +3,17 @@ About langchain-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/langchain-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/langchain-ai/langchain
+Home: https://docs.langchain.com/
 
 Package license: MIT
 
 Summary: Building applications with LLMs through composability
+
+Development: https://github.com/langchain-ai/langchain
+
+Documentation: https://reference.langchain.com/python/langchain/langchain/
+
+# LangChain - The agent engineering platform.
 
 Current build status
 ====================
