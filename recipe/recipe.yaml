@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "1.3.11"
+
+package:
+  name: langchain
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/l/langchain/langchain-${{ version }}.tar.gz
+  sha256: f3cf9cd4d2329b1a03eb8fd92b9d73e4e58a4d52570d67725fc77fbe0f104b32
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - langchain-server = langchain.server:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - langgraph >=1.2.5,<1.3.0
+    - langchain-core >=1.4.7,<2.0.0
+    - pydantic >=2.7.4,<3.0.0
+  run_constraints:
+    # based on https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/langchain/extended_testing_deps.txt#L6
+    - jsonschema >=4.22.0,<5
+    - numexpr >=2.8.6,<3
+    - rapidfuzz >=3.1.1,<4
+    - aiosqlite >=0.19.0,<0.23
+    - greenlet >=3.1.0
+     # copied from langchain-openai-feedstock 1.1.6: https://github.com/conda-forge/langchain-openai-feedstock/blob/b1e9a5650bc8ec0215e6b4a0f18fdecd5073fe33/recipe/meta.yaml
+    - openai >=2.0.0,<3.0.0 # and langchain-fireworks-feedstock
+    - tiktoken >=0.7,<1
+    # https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/partners/anthropic/pyproject.toml#L26
+    - anthropic >=0.96.0,<1
+    # https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/partners/anthropic/pyproject.toml#L26
+    # copied from langchain-fireworks-feedstock 1.1.0: https://github.com/conda-forge/langchain-fireworks-feedstock/blob/cc50a2f8f99615534b6d3c81f270daeb4eeccc83/recipe/meta.yaml
+    # and langchain-together-feedstock 0.3.1: https://github.com/conda-forge/langchain-together-feedstock/blob/503f8b42da6bf1b7c4b370b1d3b59e8263639bd9/recipe/meta.yaml
+    - fireworks-ai >=0.13.0
+    # openai is constrained above
+    - requests >=2.0.0,<3.0.0
+    - aiohttp >=3.9.1,<4.0.0
+    # copied from langchain-mistralai-feedstock 1.1.1: https://github.com/conda-forge/langchain-mistralai-feedstock/blob/a76b3cee24e392dcdaa89490923a2c969cad35f8/recipe/meta.yaml
+    - tokenizers >=0.15.1,<1
+    - httpx >=0.25.2,<1
+    - httpx-sse >=0.3.1,<1
+    # copied from langchain-groq-feedstock 1.1.1: https://github.com/conda-forge/langchain-groq-feedstock/blob/d53a6f4cd2fe52efee669e53516751a94960193f/recipe/meta.yaml
+    - groq >=0.4.1,<1
+
+tests:
+  - python:
+      imports:
+        - langchain
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Building applications with LLMs through composability
+  description: |
+    # LangChain - The agent engineering platform.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://docs.langchain.com/
+  repository: https://github.com/langchain-ai/langchain
+  documentation: https://reference.langchain.com/python/langchain/langchain/
+
+extra:
+  recipe-maintainers:
+    - dlqqq
+    - baskaryan
+    - hinthornw
+    - ccurme
+    - sydney-runkle
+    - YYYasin19
+    - pavelzw
+    - jan-janssen
