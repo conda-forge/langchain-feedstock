@@ -5,5 +5,11 @@ conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
 bot:
-  inspection: update-grayskull
   automerge: true
+  inspection: update-grayskull
+  check_solvable: true
+  run_deps_from_wheel: true
+conda_install_tool: pixi
+conda_build_tool: rattler-build
+shellcheck:
+  enabled: true
