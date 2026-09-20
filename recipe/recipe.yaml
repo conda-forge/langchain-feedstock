@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.4.0"
+  version: 1.4.2
 
 package:
   name: langchain
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/langchain/langchain-${{ version }}.tar.gz
-  sha256: 08da122a439f738f4c09a5158cfa3d2c1d8bea2d0bde7fbbf4aeb4d7f7fd9d80
+  sha256: 5b476418cacbfb8f0da6e63b3b263eefdcec13b48abd6117565a25728ec10b77
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - langgraph >=1.2.11,<1.3.0
-    - langchain-core >=1.6.0,<2.0.0
+    - langchain-core >=1.6.3,<2.0.0
     - pydantic >=2.7.4,<3.0.0
   run_constraints:
     # based on https://github.com/langchain-ai/langchain/blob/langchain%3D%3D1.3.11/libs/langchain/extended_testing_deps.txt#L6
