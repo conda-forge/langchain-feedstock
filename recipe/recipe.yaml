@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 1.5.0
+  version: "1.5.2"
 
 package:
   name: langchain
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/langchain/langchain-${{ version }}.tar.gz
-  sha256: 62b8d048847d7063cf769b39d32219c4a8ff8abc75f3ebfde461e65b9ff8ff49
+  sha256: 63816aee7f55503db5c4f266a0874047d417957ae70cbf27397325c584982c52
 
 build:
   number: 0
